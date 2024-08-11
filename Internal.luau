@@ -90,7 +90,7 @@ Instances.Title.Position = UDim2.new(0.337515682, 0, 0.111111112, 0);
 Instances.Title.BorderSizePixel = 0;
 Instances.Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
 Instances.Title.TextColor3 = Color3.fromRGB(255, 255, 255);
-Instances.Title.Text = "Synapse X - v. 2.03.5b";
+Instances.Title.Text = "Synapse X - v. 2.04b";
 Instances.Title.TextWrapped = true;
 Instances.Title.TextSize = 17;
 Instances.Title.FontFace = Font.new("rbxassetid://12187361718", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
@@ -253,6 +253,7 @@ Instances.TemplateMessage.Name = "TemplateMessage";
 Instances.TemplateMessage.Size = UDim2.new(0, 553, 0, 17);
 Instances.TemplateMessage.Visible = false;
 Instances.TemplateMessage.BorderColor3 = Color3.fromRGB(0, 0, 0);
+Instances.TemplateMessage.LayoutOrder = 1;
 Instances.TemplateMessage.BackgroundTransparency = 1;
 Instances.TemplateMessage.Position = UDim2.new(0, 0, 0.0989304781, 0);
 Instances.TemplateMessage.BorderSizePixel = 0;
@@ -695,8 +696,11 @@ task.spawn(function()
 		end
 	end)
 	
+	local __SYN_ZINDEX_CONSOLE = 1
+	
 	LogService.MessageOut:Connect(function(Message, MessageTypeEnum)
 		--print("MEssage outputted!")
+		__SYN_ZINDEX_CONSOLE += 1
 		if MessageTypeEnum == Enum.MessageType.MessageOutput then
 			local new = InternalUI:WaitForChild("ScrollingFrame").TemplateMessage:Clone()
 			new.Parent = InternalUI:WaitForChild("ScrollingFrame")
@@ -705,6 +709,7 @@ task.spawn(function()
 			new.MessageType.Text = "✅"
 			new.Message.Text = tostring(Message)
 			new.Message.TextColor3 = MessageTypes.Success
+			new.LayoutOrder = __SYN_ZINDEX_CONSOLE
 			new.Visible = true
 		elseif MessageTypeEnum == Enum.MessageType.MessageWarning then
 			local new = InternalUI:WaitForChild("ScrollingFrame").TemplateMessage:Clone()
@@ -714,6 +719,7 @@ task.spawn(function()
 			new.MessageType.Text = "⚠️"
 			new.Message.Text = tostring(Message)
 			new.Message.TextColor3 = MessageTypes.Warn
+			new.LayoutOrder = __SYN_ZINDEX_CONSOLE
 			new.Visible = true
 		elseif MessageTypeEnum == Enum.MessageType.MessageError then
 			local new = InternalUI:WaitForChild("ScrollingFrame").TemplateMessageError:Clone()
@@ -723,6 +729,7 @@ task.spawn(function()
 			new.MessageType.Text = "❌"
 			new.Message.Text = tostring(Message)
 			new.Message.TextColor3 = MessageTypes.Error
+			new.LayoutOrder = __SYN_ZINDEX_CONSOLE
 			new.Visible = true
 		end
 	end)
