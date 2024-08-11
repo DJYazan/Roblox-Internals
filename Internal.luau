@@ -22,6 +22,8 @@ local Instances = {
 	Message_2 = Instance.new("TextLabel"),
 	MessageType = Instance.new("TextLabel"),
 	UIListLayout = Instance.new("UIListLayout"),
+	Clear_2 = Instance.new("TextButton"),
+	UIStroke_4 = Instance.new("UIStroke"),
 	Synapse_X_Options = Instance.new("Frame"),
 	Topbar_3 = Instance.new("Frame"),
 	SynIcon_3 = Instance.new("ImageLabel"),
@@ -30,12 +32,12 @@ local Instances = {
 	ConsoleKeybind = Instance.new("Frame"),
 	Title = Instance.new("TextLabel"),
 	KeybindSet = Instance.new("TextButton"),
-	UIStroke_4 = Instance.new("UIStroke"),
+	UIStroke_5 = Instance.new("UIStroke"),
 	UIListLayout_2 = Instance.new("UIListLayout"),
 	MenuKeybind = Instance.new("Frame"),
 	Title_2 = Instance.new("TextLabel"),
 	KeybindSet_2 = Instance.new("TextButton"),
-	UIStroke_5 = Instance.new("UIStroke"),
+	UIStroke_6 = Instance.new("UIStroke"),
 };
 
 Instances.Internal.Name = "Internal";
@@ -193,13 +195,14 @@ Instances.TextLabel_2.Parent = Instances.Topbar_2;
 
 Instances.ScrollingFrame.Name = "ScrollingFrame";
 Instances.ScrollingFrame.Active = true;
-Instances.ScrollingFrame.Size = UDim2.new(0, 553, 0, 347);
+Instances.ScrollingFrame.Size = UDim2.new(0, 553, 0, 310);
 Instances.ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0);
 Instances.ScrollingFrame.BackgroundTransparency = 1;
 Instances.ScrollingFrame.Position = UDim2.new(0, 0, 0.0721925125, 0);
 Instances.ScrollingFrame.BorderSizePixel = 0;
 Instances.ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
 Instances.ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0);
+Instances.ScrollingFrame.CanvasPosition = Vector2.new(0, 438);
 Instances.ScrollingFrame.Parent = Instances.Synapse_X_Console;
 
 Instances.TemplateMessage.Name = "TemplateMessage";
@@ -222,8 +225,10 @@ Instances.Message_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
 Instances.Message_2.TextColor3 = Color3.fromRGB(255, 255, 255);
 Instances.Message_2.Text = "CONSOLE: erm what the sigma?!";
 Instances.Message_2.TextXAlignment = Enum.TextXAlignment.Left;
+Instances.Message_2.TextWrapped = true;
 Instances.Message_2.TextSize = 14;
 Instances.Message_2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Instances.Message_2.TextScaled = true;
 Instances.Message_2.Parent = Instances.TemplateMessage;
 
 Instances.MessageType.Name = "MessageType";
@@ -235,12 +240,31 @@ Instances.MessageType.BorderSizePixel = 0;
 Instances.MessageType.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
 Instances.MessageType.TextColor3 = Color3.fromRGB(0, 0, 0);
 Instances.MessageType.Text = "⚠️";
+Instances.MessageType.TextWrapped = true;
 Instances.MessageType.TextSize = 14;
 Instances.MessageType.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Instances.MessageType.TextScaled = true;
 Instances.MessageType.Parent = Instances.TemplateMessage;
 
 Instances.UIListLayout.Name = "UIListLayout";
 Instances.UIListLayout.Parent = Instances.ScrollingFrame;
+
+Instances.Clear_2.Name = "Clear";
+Instances.Clear_2.Size = UDim2.new(0, 139, 0, 20);
+Instances.Clear_2.BorderColor3 = Color3.fromRGB(0, 0, 0);
+Instances.Clear_2.Position = UDim2.new(0.373945177, 0, 0.916159868, 0);
+Instances.Clear_2.BorderSizePixel = 0;
+Instances.Clear_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71);
+Instances.Clear_2.TextColor3 = Color3.fromRGB(255, 255, 255);
+Instances.Clear_2.Text = "Clear";
+Instances.Clear_2.TextSize = 17;
+Instances.Clear_2.FontFace = Font.new("rbxassetid://12187361718", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Instances.Clear_2.Parent = Instances.Synapse_X_Console;
+
+Instances.UIStroke_4.Name = "UIStroke";
+Instances.UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
+Instances.UIStroke_4.Color = Color3.fromRGB(99, 99, 99);
+Instances.UIStroke_4.Parent = Instances.Clear_2;
 
 Instances.Synapse_X_Options.Name = "Synapse X Options";
 Instances.Synapse_X_Options.Size = UDim2.new(0, 318, 0, 292);
@@ -328,10 +352,10 @@ Instances.KeybindSet.FontFace = Font.new("rbxassetid://12187361718", Enum.FontWe
 Instances.KeybindSet.TextScaled = true;
 Instances.KeybindSet.Parent = Instances.ConsoleKeybind;
 
-Instances.UIStroke_4.Name = "UIStroke";
-Instances.UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
-Instances.UIStroke_4.Color = Color3.fromRGB(99, 99, 99);
-Instances.UIStroke_4.Parent = Instances.KeybindSet;
+Instances.UIStroke_5.Name = "UIStroke";
+Instances.UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
+Instances.UIStroke_5.Color = Color3.fromRGB(99, 99, 99);
+Instances.UIStroke_5.Parent = Instances.KeybindSet;
 
 Instances.UIListLayout_2.Name = "UIListLayout";
 Instances.UIListLayout_2.Parent = Instances.Settings;
@@ -372,12 +396,11 @@ Instances.KeybindSet_2.FontFace = Font.new("rbxassetid://12187361718", Enum.Font
 Instances.KeybindSet_2.TextScaled = true;
 Instances.KeybindSet_2.Parent = Instances.MenuKeybind;
 
-Instances.UIStroke_5.Name = "UIStroke";
-Instances.UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
-Instances.UIStroke_5.Color = Color3.fromRGB(99, 99, 99);
-Instances.UIStroke_5.Parent = Instances.KeybindSet_2;
+Instances.UIStroke_6.Name = "UIStroke";
+Instances.UIStroke_6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
+Instances.UIStroke_6.Color = Color3.fromRGB(99, 99, 99);
+Instances.UIStroke_6.Parent = Instances.KeybindSet_2;
 
--- Function "Handler"
 task.spawn(function()
 	local script = Instance.new("LocalScript", Instances.Scripts);
 	local UserInputService = game:GetService("UserInputService")
@@ -502,7 +525,6 @@ task.spawn(function()
 	end)
 end);
 
--- Function "Console"
 task.spawn(function()
 	local script = Instance.new("LocalScript", Instances.Scripts);
 	type settings = {
@@ -581,6 +603,14 @@ task.spawn(function()
 	
 	local LogService = game:GetService("LogService")
 	
+	InternalUI.Clear.Activated:Connect(function()
+		for i, v in pairs(InternalUI.ScrollingFrame:GetChildren()) do
+			if v:IsA("Frame") and v.Name ~= "TemplateMessage" then
+				v:Destroy()
+			end
+		end
+	end)
+	
 	LogService.MessageOut:Connect(function(Message, MessageTypeEnum)
 		--print("MEssage outputted!")
 		if MessageTypeEnum == Enum.MessageType.MessageOutput then
@@ -614,7 +644,6 @@ task.spawn(function()
 	end)
 end);
 
--- Function "Options"
 task.spawn(function()
 	local script = Instance.new("LocalScript", Instances.Scripts);
 	type settings = {
@@ -674,6 +703,46 @@ task.spawn(function()
 	UserInputService.InputChanged:Connect(function(input)
 		if input == dragInput and IsDragging then
 			update(input)
+		end
+	end)
+	
+	local settingRN = false
+	
+	InternalUI.Settings.ConsoleKeybind.KeybindSet.Activated:Connect(function()
+		if settingRN then return end
+		if settingRN == false then
+			local func = coroutine.wrap(function()
+				settingRN = true
+				local KeybindSet = InternalUI.Settings.ConsoleKeybind.KeybindSet
+				KeybindSet.Text = "..."
+				settings.OpenConsoleKey = Enum.KeyCode.World86
+				local i = UserInputService.InputBegan:Wait()
+				if i.UserInputType == Enum.UserInputType.Keyboard then
+					KeybindSet.Text = i.KeyCode.Name
+					settings.OpenConsoleKey = i.KeyCode
+					settingRN = false
+				end
+			end)
+			func()
+		end
+	end)
+	
+	InternalUI.Settings.MenuKeybind.KeybindSet.Activated:Connect(function()
+		if settingRN then return end
+		if settingRN == false then
+			local func = coroutine.wrap(function()
+				settingRN = true
+				local KeybindSet = InternalUI.Settings.MenuKeybind.KeybindSet
+				KeybindSet.Text = "..."
+				settings.HideMenuKey = Enum.KeyCode.World86
+				local i = UserInputService.InputBegan:Wait()
+				if i.UserInputType == Enum.UserInputType.Keyboard then
+					KeybindSet.Text = i.KeyCode.Name
+					settings.HideMenuKey = i.KeyCode
+					settingRN = false
+				end
+			end)
+			func()
 		end
 	end)
 	
