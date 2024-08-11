@@ -14,6 +14,10 @@ local Instances = {
 	IDE = Instance.new("TextBox"),
 	OptionsButton = Instance.new("TextButton"),
 	UIStroke_3 = Instance.new("UIStroke"),
+	Scripts_2 = Instance.new("ScrollingFrame"),
+	Template = Instance.new("Frame"),
+	File = Instance.new("TextButton"),
+	UIListLayout = Instance.new("UIListLayout"),
 	Synapse_X_Console = Instance.new("Frame"),
 	Topbar_2 = Instance.new("Frame"),
 	SynIcon_2 = Instance.new("ImageLabel"),
@@ -22,7 +26,7 @@ local Instances = {
 	TemplateMessage = Instance.new("Frame"),
 	Message_2 = Instance.new("TextLabel"),
 	MessageType = Instance.new("TextLabel"),
-	UIListLayout = Instance.new("UIListLayout"),
+	UIListLayout_2 = Instance.new("UIListLayout"),
 	Clear_2 = Instance.new("TextButton"),
 	UIStroke_4 = Instance.new("UIStroke"),
 	Synapse_X_Options = Instance.new("Frame"),
@@ -34,7 +38,7 @@ local Instances = {
 	Title_2 = Instance.new("TextLabel"),
 	KeybindSet = Instance.new("TextButton"),
 	UIStroke_5 = Instance.new("UIStroke"),
-	UIListLayout_2 = Instance.new("UIListLayout"),
+	UIListLayout_3 = Instance.new("UIListLayout"),
 	MenuKeybind = Instance.new("Frame"),
 	Title_3 = Instance.new("TextLabel"),
 	KeybindSet_2 = Instance.new("TextButton"),
@@ -54,7 +58,7 @@ Instances.Synapse_X.Name = "Synapse X";
 Instances.Synapse_X.Size = UDim2.new(0, 797, 0, 292);
 Instances.Synapse_X.Visible = false;
 Instances.Synapse_X.BorderColor3 = Color3.fromRGB(0, 0, 0);
-Instances.Synapse_X.Position = UDim2.new(0.188767552, 0, 0.277777791, 0);
+Instances.Synapse_X.Position = UDim2.new(0.0536112785, 0, 0.235690236, 0);
 Instances.Synapse_X.BorderSizePixel = 0;
 Instances.Synapse_X.BackgroundColor3 = Color3.fromRGB(84, 84, 84);
 Instances.Synapse_X.Parent = Instances.Internals;
@@ -155,11 +159,48 @@ Instances.UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
 Instances.UIStroke_3.Color = Color3.fromRGB(99, 99, 99);
 Instances.UIStroke_3.Parent = Instances.OptionsButton;
 
+Instances.Scripts_2.Name = "Scripts";
+Instances.Scripts_2.Active = true;
+Instances.Scripts_2.Size = UDim2.new(0, 100, 0, 199);
+Instances.Scripts_2.Visible = false;
+Instances.Scripts_2.BorderColor3 = Color3.fromRGB(0, 0, 0);
+Instances.Scripts_2.BackgroundTransparency = 1;
+Instances.Scripts_2.Position = UDim2.new(0.86449182, 0, 0.133561641, 0);
+Instances.Scripts_2.BorderSizePixel = 0;
+Instances.Scripts_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+Instances.Scripts_2.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0);
+Instances.Scripts_2.Parent = Instances.Synapse_X;
+
+Instances.Template.Name = "Template";
+Instances.Template.Size = UDim2.new(0, 100, 0, 13);
+Instances.Template.BorderColor3 = Color3.fromRGB(0, 0, 0);
+Instances.Template.BackgroundTransparency = 1;
+Instances.Template.BorderSizePixel = 0;
+Instances.Template.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+Instances.Template.Parent = Instances.Scripts_2;
+
+Instances.File.Name = "File";
+Instances.File.Size = UDim2.new(0, 200, 0, 13);
+Instances.File.BorderColor3 = Color3.fromRGB(0, 0, 0);
+Instances.File.BackgroundTransparency = 0.8999999761581421;
+Instances.File.BorderSizePixel = 0;
+Instances.File.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+Instances.File.TextColor3 = Color3.fromRGB(255, 255, 255);
+Instances.File.TextStrokeColor3 = Color3.fromRGB(255, 255, 255);
+Instances.File.Text = "Template.lua";
+Instances.File.TextXAlignment = Enum.TextXAlignment.Left;
+Instances.File.TextSize = 14;
+Instances.File.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Instances.File.Parent = Instances.Template;
+
+Instances.UIListLayout.Name = "UIListLayout";
+Instances.UIListLayout.Parent = Instances.Scripts_2;
+
 Instances.Synapse_X_Console.Name = "Synapse X Console";
 Instances.Synapse_X_Console.Size = UDim2.new(0, 553, 0, 374);
 Instances.Synapse_X_Console.Visible = false;
 Instances.Synapse_X_Console.BorderColor3 = Color3.fromRGB(0, 0, 0);
-Instances.Synapse_X_Console.Position = UDim2.new(0.188767552, 0, 0.277777791, 0);
+Instances.Synapse_X_Console.Position = UDim2.new(0.731736302, 0, 0.235690236, 0);
 Instances.Synapse_X_Console.BorderSizePixel = 0;
 Instances.Synapse_X_Console.BackgroundColor3 = Color3.fromRGB(84, 84, 84);
 Instances.Synapse_X_Console.Parent = Instances.Internals;
@@ -203,7 +244,7 @@ Instances.ScrollingFrame.Position = UDim2.new(0, 0, 0.0721925125, 0);
 Instances.ScrollingFrame.BorderSizePixel = 0;
 Instances.ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
 Instances.ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0);
-Instances.ScrollingFrame.CanvasPosition = Vector2.new(0, 438);
+Instances.ScrollingFrame.CanvasPosition = Vector2.new(0, 437.999969);
 Instances.ScrollingFrame.Parent = Instances.Synapse_X_Console;
 
 Instances.TemplateMessage.Name = "TemplateMessage";
@@ -247,8 +288,8 @@ Instances.MessageType.FontFace = Font.new("rbxasset://fonts/families/SourceSansP
 Instances.MessageType.TextScaled = true;
 Instances.MessageType.Parent = Instances.TemplateMessage;
 
-Instances.UIListLayout.Name = "UIListLayout";
-Instances.UIListLayout.Parent = Instances.ScrollingFrame;
+Instances.UIListLayout_2.Name = "UIListLayout";
+Instances.UIListLayout_2.Parent = Instances.ScrollingFrame;
 
 Instances.Clear_2.Name = "Clear";
 Instances.Clear_2.Size = UDim2.new(0, 139, 0, 20);
@@ -358,8 +399,8 @@ Instances.UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
 Instances.UIStroke_5.Color = Color3.fromRGB(99, 99, 99);
 Instances.UIStroke_5.Parent = Instances.KeybindSet;
 
-Instances.UIListLayout_2.Name = "UIListLayout";
-Instances.UIListLayout_2.Parent = Instances.Settings;
+Instances.UIListLayout_3.Name = "UIListLayout";
+Instances.UIListLayout_3.Parent = Instances.Settings;
 
 Instances.MenuKeybind.Name = "MenuKeybind";
 Instances.MenuKeybind.Size = UDim2.new(0, 318, 0, 25);
@@ -716,7 +757,7 @@ task.spawn(function()
 				settingRN = true
 				local KeybindSet = InternalUI.Settings.ConsoleKeybind.KeybindSet
 				KeybindSet.Text = "..."
-				settings.OpenConsoleKey = Enum.KeyCode.World86 -- Set it to the most useless key ever since we can't do nil
+				settings.OpenConsoleKey = Enum.KeyCode.World86
 				local i = UserInputService.InputBegan:Wait()
 				if i.UserInputType == Enum.UserInputType.Keyboard then
 					KeybindSet.Text = i.KeyCode.Name
