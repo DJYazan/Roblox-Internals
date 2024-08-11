@@ -716,7 +716,7 @@ task.spawn(function()
 				settingRN = true
 				local KeybindSet = InternalUI.Settings.ConsoleKeybind.KeybindSet
 				KeybindSet.Text = "..."
-				settings.OpenConsoleKey = Enum.KeyCode.World86
+				settings.OpenConsoleKey = Enum.KeyCode.World86 -- Set it to the most useless key ever since we can't do nil
 				local i = UserInputService.InputBegan:Wait()
 				if i.UserInputType == Enum.UserInputType.Keyboard then
 					KeybindSet.Text = i.KeyCode.Name
