@@ -16,7 +16,7 @@ Clear your Console if it is stuck, working on a solution.
 
 NOTE TO THE SYNAPSE/ ROBLOX DEVS
 1. This script is not designed for exploits or misuse. This script fully made in Luau and using its functions. This script was designed for Roblox Studio
-2. If any Developers have issues with this being up, please dm me on discord: "@._._.__.___.____.".
+2. If any Developers have issues with this being up, please dm me on discord: "@synapseIIc". (not llc IIc no l its a uppercase i)
 3. i am NOT responsible for the user's actions with this Internal UI
 4. This does not provide any unfair advantages as this Internal UI uses loadstring which is completely up to the developers if they wanna turn on loadstring or keep it off.
 5. For any copyright issues, i will gladly rebrand the script, but i will not take it down unless something serious will (has?) happen that impacts Vulnerabilites, Exploits or Cheaters.
