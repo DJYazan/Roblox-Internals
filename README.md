@@ -2,6 +2,8 @@
 
 A script designed for Roblox Internals. Currently only has Synapse X, am working on other Internals.
 
+It can be detected very easily but you should replace globals with readfile and writefile (if on executor) but it works perfectly fine in studio if a server loadstring!
+
 The script is open source and free to use
 
 If you use my code to make your own projects please do the following:
